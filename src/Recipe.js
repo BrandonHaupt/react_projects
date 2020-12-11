@@ -6,12 +6,12 @@ const Recipe = ({title, calories, image, ingredients}) => {
         <div className={style.recipe}>
             <h1>{title}</h1>
             <img className={style.image} src={image} alt=""/>
+            <p>Calories: {calories}</p>
             <ol className={style.listItems}>
                 {ingredients.map(ingredient => (
                     <li>{ingredient.text}</li>
                 ))}
-            </ol>
-            <p>Calories: {calories}</p>
+            </ol>   
         </div>
     );
 }
